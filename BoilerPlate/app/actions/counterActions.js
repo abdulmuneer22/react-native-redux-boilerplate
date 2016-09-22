@@ -11,3 +11,9 @@ export function decrement() {
     type: types.DECREMENT
   };
 }
+
+export function sayhello() {
+  return {
+    type: types.SAYHELLO
+  };
+}

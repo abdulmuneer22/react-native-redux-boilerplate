@@ -19,7 +19,10 @@ class CounterApp extends Component {
     return (
       <Counter
         counter={state.count}
+        displayText = {state.displayText}
         {...actions} />
+
+      
     );
   }
 }

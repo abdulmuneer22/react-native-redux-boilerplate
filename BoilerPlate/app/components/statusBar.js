@@ -13,31 +13,17 @@ const styles = StyleSheet.create({
   }
 });
 
-export default class Counter extends Component {
+export default class StatusBar extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    const { counter, increment, decrement , displayText ,sayhello} = this.props;
+    const { statusBardisplayText, toggleStatus} = this.props;
 
     return (
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>{counter}</Text>
-        <Text>{displayText}</Text>
-        
-        
-        
-        <TouchableOpacity onPress={increment} style={styles.button}>
-          <Text>up</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={decrement} style={styles.button}>
-          <Text>down</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={sayhello} style={styles.button}>
-          <Text>Say Hello</Text>
-        </TouchableOpacity>
+        <Text>User Status : {statusBardisplayText}</Text>
       </View>
     );
   }

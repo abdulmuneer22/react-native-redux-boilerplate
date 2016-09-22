@@ -1,7 +1,8 @@
 import * as types from '../actions/actionTypes';
 
 const initialState = {
-  count: 0
+  count: 0,
+  sayhello : "Hi there !"
 };
 
 export default function counter(state = initialState, action = {}) {
@@ -16,6 +17,12 @@ export default function counter(state = initialState, action = {}) {
         ...state,
         count: state.count - 1
       };
+
+    case types.SAYHELLO:
+    return{
+      ...state,
+      displayText : state.sayhello
+    };
     default:
       return state;
   }
